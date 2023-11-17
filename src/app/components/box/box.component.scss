@@ -1,0 +1,23 @@
+.box{
+    width:50px;
+    border: 1px solid;
+    height: 50px;
+    margin:0 auto;
+    background-color: white;
+    font-size: 30px;
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+}
+
+.winnerBox{
+    background-color: green;
+}
+
+.loosesBox{
+    background-color:red;
+}
+
+.blankBox{
+    background-color: #fff;
+}

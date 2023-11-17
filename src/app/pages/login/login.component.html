@@ -1,0 +1,14 @@
+<section class="login-section">
+  <mat-icon class="mouse-icon">mouse</mat-icon>
+  <mat-form-field class="input-username">
+    <mat-label>Name</mat-label>
+    <input matInput required type="text" maxlength="20"  [formControl]="nameControl"
+    placeholder="Name" 
+/>
+<mat-error *ngIf="nameControl.invalid">
+  {{ errorMessage }}
+</mat-error>
+  </mat-form-field>
+<button class="login-button" mat-raised-button color="primary" [disabled]="nameControl.invalid" (click)="login()">Play</button>
+</section>
+       

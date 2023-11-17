@@ -1,0 +1,26 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <span>{{user.user}}</span>
+        <mat-form-field class="gamemode-selection"> 
+          <select matNativeControl required [(ngModel)]="selectedDifficulty" >
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </mat-form-field>
+      </mat-toolbar>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+<h3 class="points">Points: {{user.score}}</h3>
+<h2 class="phrase-of-the-game">{{gameMessage}}</h2>
+<section class="playground">
+  <ng-template [ngIf]="startPlay">
+    <div *ngFor="let box of array">
+      <app-box [number]="box" [user]="user.user" [winnerNumber]="randomNumber" [startGame]="startPlay" [difficulty]="selectedDifficulty
+      " ></app-box>
+  </div>
+  </ng-template>
+    <button mat-raised-button color="primary" (click)="startGame()" class="play-button">Play</button>
+</section>

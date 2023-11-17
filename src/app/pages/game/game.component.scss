@@ -1,0 +1,45 @@
+//HEADER
+.sidenav-container {
+    height: 7%;
+  }
+  
+  .sidenav {
+    width: 200px;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .gamemode-selection{
+    margin-left: 55%;
+    width:25%;
+  }
+  ::ng-deep .mat-select-content{
+    background-color: red;
+}
+//GAME
+.playground{
+    width:40%;
+    display:flex;
+    flex-flow:row wrap;
+    margin:0 auto;
+}
+.points{
+    text-align: end;
+    margin-right: 5%;
+}
+
+.phrase-of-the-game{
+    text-align: center;
+}
+
+.play-button{
+    margin:15% auto;
+    width:55%;
+}
